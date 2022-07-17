@@ -32,9 +32,19 @@ const getDogPic = async () => {
   } catch (error) {
     console.log(error);
   }
+
+  return "2 : Ready";
 };
 
-getDogPic();
+(async () => {
+  try {
+    console.log("1 : I will get the dog pics");
+    console.log(await getDogPic());
+    console.log("3 : Done getting the dog pics");
+  } catch (error) {
+    console.log(error);
+  }
+})();
 
 /*
 
